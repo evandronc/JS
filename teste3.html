@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+</head>
+<!--Javascript-->
+<script>
+    let isBroken = false
+    const changeLamp = (number) => {
+        const lamp = document.getElementById("lamp")
+        if (!isBroken)
+        {
+            if (number == 1) {
+                lamp.src = "images/bulb-on.jpg"
+                isBroken = true
+            } else if (number == 2) {
+                lamp.src = "images/bulb-broken.jpg"
+            } else {
+                lamp.src = "images/bulb-off.jpg"
+            }
+        }
+    }
+</script>
+<body>
+    <img id="lamp" src="images/bulb-off.jpg" 
+        onclick     = changeLamp(1)    
+        onMouseOver = changeLamp(2) 
+        onmouseout  = changeLamp(3)
+    >
+</body>
+</html>
